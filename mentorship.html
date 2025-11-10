@@ -3787,6 +3787,14 @@ flexibility(document.documentElement);
     <link rel="icon" href="https://www.siddahmed.com/wp-content/uploads/2024/10/Logo.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="https://www.siddahmed.com/wp-content/uploads/2024/10/Logo.png" />
     <meta name="msapplication-TileImage" content="https://www.siddahmed.com/wp-content/uploads/2024/10/Logo.png" />
+    <!-- User-requested page-wide background override -->
+    <style>
+        :root{--user-page-bg:#3a3120}
+        html, body, #page, .site, .site-content, section, div, .elementor-section, .elementor-column, .elementor-widget, .wp-block-group, .wp-block-cover { background-color: var(--user-page-bg) !important; background-image: none !important; }
+        *::before, *::after { background: none !important; }
+        body, .entry-content, .elementor-widget-container { color: #eae1d6 !important; }
+        a, a:visited { color: #f0d8a8 !important; }
+    </style>
 </head>
 
 <body class="wp-singular page-template page-template-templates page-template-builder-fullwidth page-template-templatesbuilder-fullwidth-php page page-id-352 wp-custom-logo wp-embed-responsive wp-theme-astra exclusive-addons-elementor ast-header-break-point ast-page-builder-template ast-no-sidebar astra-4.11.13 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-normal-title-enabled elementor-default elementor-kit-6 elementor-page elementor-page-352">
