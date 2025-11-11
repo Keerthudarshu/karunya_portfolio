@@ -3826,17 +3826,35 @@ flexibility(document.documentElement);
                     </div>
                 </div>
                 <div class="elementor-element elementor-element-0ee7c53 e-con-full e-flex e-con e-child" data-id="0ee7c53" data-element_type="container">
+                    <style>
+                        /* Mobile-only: force nav/menu text and burger icon to black */
+                        @media (max-width: 921px) {
+                            #menu-2-700c25a.elementor-nav-menu,
+                            #menu-2-700c25a.elementor-nav-menu a,
+                            #menu-2-700c25a.elementor-nav-menu .elementor-item,
+                            .elementor-nav-menu--main .elementor-item {
+                                color: #000 !important;
+                            }
+                            #menu-2-700c25a .elementor-item:hover,
+                            #menu-2-700c25a .elementor-item:focus,
+                            #menu-2-700c25a .elementor-item.elementor-item-active {
+                                color: #000 !important;
+                            }
+                            .elementor-menu-toggle svg path,
+                            .elementor-menu-toggle svg { fill: #000 !important; color: #000 !important; }
+                        }
+                    </style>
                     <div class="elementor-element elementor-element-700c25a elementor-nav-menu__align-end elementor-nav-menu--dropdown-mobile elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-nav-menu"
                         data-id="700c25a" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}"
                         data-widget_type="nav-menu.default">
                         <div class="elementor-widget-container">
                             <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
-                                <ul id="menu-1-700c25a" class="elementor-nav-menu">
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-285"><a href="/index.html" aria-current="page" class="elementor-item elementor-item-active menu-link">Home</a></li>
+                                <ul id="menu-2-700c25a" class="elementor-nav-menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-285"><a href="/index.html" aria-current="page" class="elementor-item menu-link"class="elementor-item menu-link" >Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363"><a href="/booking.html" class="elementor-item menu-link">Booking</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364"><a href="/journy.html" class="elementor-item menu-link">Journey</a></li> 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3486"><a href="/media.html" class="elementor-item menu-link">Media</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3561"><a href="/blogs.html" class="elementor-item menu-link">Blogs</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item page_item page-item-9 current_page_item menu-item-3561"><a href="/blogs.html" class="elementor-item elementor-item-active menu-link" >Blogs</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="/contact.html" class="elementor-item menu-link">Contact</a></li>
                                 </ul>
                             </nav>
@@ -3849,11 +3867,11 @@ flexibility(document.documentElement);
                             </div>
                             <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
                                 <ul id="menu-2-700c25a" class="elementor-nav-menu">
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-285"><a href="/index.html" aria-current="page" class="elementor-item elementor-item-active menu-link">Home</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-285"><a href="/index.html" aria-current="page" class="elementor-item menu-link"class="elementor-item menu-link" >Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363"><a href="/booking.html" class="elementor-item menu-link">Booking</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364"><a href="/journy.html" class="elementor-item menu-link">Journey</a></li> 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3486"><a href="/media.html" class="elementor-item menu-link">Media</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3561"><a href="/blogs.html" class="elementor-item menu-link">Blogs</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item page_item page-item-9 current_page_item menu-item-3561"><a href="/blogs.html" class="elementor-item elementor-item-active menu-link" >Blogs</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="/contact.html" class="elementor-item menu-link">Contact</a></li>
                                 </ul>
                             </nav>
@@ -3902,7 +3920,7 @@ flexibility(document.documentElement);
                     <div class="elementor-element elementor-element-2f50dc0 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="2f50dc0" data-element_type="widget" data-widget_type="theme-site-logo.default">
                         <div class="elementor-widget-container">
                             <a href="https://www.siddahmed.com">
-			<img fetchpriority="high" decoding="async" width="1500" height="1060" src="https://www.siddahmed.com/wp-content/uploads/2024/10/Logo.png" class="attachment-full size-full wp-image-161" alt="Siddahmed Logo" srcset="https://www.siddahmed.com/wp-content/uploads/2024/10/Logo.png 1500w, https://www.siddahmed.com/wp-content/uploads/2024/10/Logo-300x212.png 300w, https://www.siddahmed.com/wp-content/uploads/2024/10/Logo-1024x724.png 1024w, https://www.siddahmed.com/wp-content/uploads/2024/10/Logo-768x543.png 768w" sizes="(max-width: 1500px) 100vw, 1500px" />				</a>
+			<img fetchpriority="high" decoding="async" width="1500" height="1060" src="/logo/KARUNYA RAM (4).png" class="attachment-full size-full wp-image-161" alt="Siddahmed Logo"  sizes="(max-width: 1500px) 100vw, 1500px" />				</a>
                         </div>
                     </div>
                 </div>
@@ -3946,15 +3964,12 @@ flexibility(document.documentElement);
                         data-widget_type="nav-menu.default">
                         <div class="elementor-widget-container">
                             <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
-                                <ul id="menu-1-5f5b3cf" class="elementor-nav-menu">
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-285"><a href="https://www.siddahmed.com/" class="elementor-item menu-link">Home</a></li>
+                                <ul id="menu-2-700c25a" class="elementor-nav-menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-285"><a href="/index.html" aria-current="page" class="elementor-item menu-link"class="elementor-item menu-link" >Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363"><a href="/booking.html" class="elementor-item menu-link">Booking</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364"><a href="/journy.html" class="elementor-item menu-link">Journey</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-365"><a href="/media.html" class="elementor-item menu-link">Mentorship</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3271"><a href="https://www.siddahmed.com/books/" class="elementor-item menu-link">Books</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3486"><a href="https://www.siddahmed.com/media/" class="elementor-item menu-link">Media</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3297 current_page_item menu-item-3561"><a href="https://www.siddahmed.com/blogs/" aria-current="page" class="elementor-item elementor-item-active menu-link">Blogs</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="/blogs.html" class="elementor-item menu-link">Career</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364"><a href="/journy.html" class="elementor-item menu-link">Journey</a></li> 
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3486"><a href="/media.html" class="elementor-item menu-link">Media</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item page_item page-item-9 current_page_item menu-item-3561"><a href="/blogs.html" class="elementor-item elementor-item-active menu-link" >Blogs</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="/contact.html" class="elementor-item menu-link">Contact</a></li>
                                 </ul>
                             </nav>
@@ -3966,16 +3981,13 @@ flexibility(document.documentElement);
                                     </svg> <span class="elementor-screen-only">Menu</span>
                             </div>
                             <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-                                <ul id="menu-2-5f5b3cf" class="elementor-nav-menu">
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-285"><a href="https://www.siddahmed.com/" class="elementor-item menu-link" tabindex="-1">Home</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363"><a href="/booking.html" class="elementor-item menu-link" tabindex="-1">Booking</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364"><a href="/journy.html" class="elementor-item menu-link" tabindex="-1">Journey</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-365"><a href="/media.html" class="elementor-item menu-link" tabindex="-1">Mentorship</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3271"><a href="https://www.siddahmed.com/books/" class="elementor-item menu-link" tabindex="-1">Books</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3486"><a href="https://www.siddahmed.com/media/" class="elementor-item menu-link" tabindex="-1">Media</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3297 current_page_item menu-item-3561"><a href="https://www.siddahmed.com/blogs/" aria-current="page" class="elementor-item elementor-item-active menu-link" tabindex="-1">Blogs</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="/blogs.html" class="elementor-item menu-link" tabindex="-1">Career</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="/contact.html" class="elementor-item menu-link" tabindex="-1">Contact</a></li>
+                                <ul id="menu-2-700c25a" class="elementor-nav-menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-285"><a href="/index.html" aria-current="page" class="elementor-item menu-link"class="elementor-item menu-link" >Home</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363"><a href="/booking.html" class="elementor-item menu-link">Booking</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364"><a href="/journy.html" class="elementor-item menu-link">Journey</a></li> 
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3486"><a href="/media.html" class="elementor-item menu-link">Media</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-blog current-menu-item page_item page-item-9 current_page_item menu-item-3561"><a href="/blogs.html" class="elementor-item elementor-item-active menu-link" >Blogs</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="/contact.html" class="elementor-item menu-link">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -4337,32 +4349,32 @@ flexibility(document.documentElement);
                         <div class="elementor-element elementor-element-31d575b e-con-full e-flex e-con e-child" data-id="31d575b" data-element_type="container">
                             <div class="elementor-element elementor-element-68ce884 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading" data-id="68ce884" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">Entrepreneurial Leadership</h2>
+                                    <h2 style="color: #f0d8a8;" class="elementor-heading-title elementor-size-default">Entrepreneurial Leadership</h2>
                                 </div>
                             </div>
                             <div class="elementor-element elementor-element-f369095 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading" data-id="f369095" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">Business Acceleration</h2>
+                                    <h2 style="color: #f0d8a8;" class="elementor-heading-title elementor-size-default">Business Acceleration</h2>
                                 </div>
                             </div>
                             <div class="elementor-element elementor-element-6c3249e exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading" data-id="6c3249e" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">Enterprise Thinking</h2>
+                                    <h2 style="color: #f0d8a8;" class="elementor-heading-title elementor-size-default">Enterprise Thinking</h2>
                                 </div>
                             </div>
                             <div class="elementor-element elementor-element-bdef184 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading" data-id="bdef184" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">Startup Foundations</h2>
+                                    <h2 style="color: #f0d8a8;" class="elementor-heading-title elementor-size-default">Startup Foundations</h2>
                                 </div>
                             </div>
                             <div class="elementor-element elementor-element-bb7352d exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading" data-id="bb7352d" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">Career Coaching</h2>
+                                    <h2 style="color: #f0d8a8;" class="elementor-heading-title elementor-size-default">Career Coaching</h2>
                                 </div>
                             </div>
                             <div class="elementor-element elementor-element-b15fe36 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading" data-id="b15fe36" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">Motivational Talks</h2>
+                                    <h2 style="color: #f0d8a8;" class="elementor-heading-title elementor-size-default">Motivational Talks</h2>
                                 </div>
                             </div>
                         </div>
