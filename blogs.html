@@ -1799,7 +1799,7 @@
         }
 
         @media(min-width: 921px) {
-            .ast-separate-container .entry-content .wp-block-group.alignwide:not(.inherit-container-width)> :where(:not(.alignleft): not(.alignright)), .ast-plain-container .entry-content .wp-block-group.alignwide:not(.inherit-container-width) > :where(:not(.alignleft):not(.alignright)) {
+            .ast-separate-container .entry-content .wp-block-group.alignwide:not(.inherit-container-width)> :where(:not(.alignleft):not(.alignright)), .ast-plain-container .entry-content .wp-block-group.alignwide:not(.inherit-container-width) > :where(:not(.alignleft):not(.alignright)) {
                 max-width: calc( var(--wp--custom--ast-content-width-size) + 80px);
             }
             .ast-plain-container.ast-right-sidebar .entry-content[data-ast-blocks-layout] .alignfull,
@@ -3286,7 +3286,34 @@
         a:where(:not(.wp-element-button)) {
             text-decoration: none;
         }
+.elementor-element.elementor-element-f6a9f9f img,
+        .elementor-element.elementor-element-bd1189b img {
+            background: transparent !important;
+            transition: transform 0.3s ease, opacity 0.3s ease !important;
+            /* Increase logo height (desktop) -- enforced with !important */
+            max-height: 260px !important;
+            width: auto !important;
+            border-radius: 0 !important; /* ensure not circular */
+            display: block !important;
+        }
 
+        /* Strong override for any occurrences of the local logo file */
+        img[src$="karunya_ram_logo.png"] {
+            max-height: 300px !important;
+            width: auto !important;
+            border-radius: 0 !important;
+            display: block !important;
+        }
+
+        /* Mobile override: keep logo smaller on narrow screens */
+        @media (max-width: 921px) {
+            .elementor-element.elementor-element-f6a9f9f img,
+            .elementor-element.elementor-element-bd1189b img,
+            img[src$="karunya_ram_logo.png"] {
+                max-height: 140px !important;
+                width: auto !important;
+            }
+        }
         :root :where(.wp-element-button, .wp-block-button__link) {
             background-color: #32373c;
             border-width: 0;
@@ -3794,7 +3821,7 @@ flexibility(document.documentElement);
                     <div class="elementor-element elementor-element-aa7d366 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="aa7d366" data-element_type="widget" data-widget_type="theme-site-logo.default">
                         <div class="elementor-widget-container">
                             <a href="https://www.siddahmed.com">
-			<img fetchpriority="high" decoding="async" width="1500" height="1060" src="https://www.siddahmed.com/wp-content/uploads/2024/10/Logo.png" class="attachment-full size-full wp-image-161" alt="Siddahmed Logo" srcset="https://www.siddahmed.com/wp-content/uploads/2024/10/Logo.png 1500w, https://www.siddahmed.com/wp-content/uploads/2024/10/Logo-300x212.png 300w, https://www.siddahmed.com/wp-content/uploads/2024/10/Logo-1024x724.png 1024w, https://www.siddahmed.com/wp-content/uploads/2024/10/Logo-768x543.png 768w" sizes="(max-width: 1500px) 100vw, 1500px" />				</a>
+                        <img fetchpriority="high" decoding="async" width="2000" height="1413" src="/logo/KARUNYA RAM (4).png" sizes="(max-width: 2000px) 100vw, 2000px" style="width:2000px;height:auto;max-width:100%;display:block;" />				</a>
                         </div>
                     </div>
                 </div>
@@ -3985,7 +4012,24 @@ flexibility(document.documentElement);
             <div class="e-con-inner">
                 <div class="elementor-element elementor-element-e59a894 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-exad-post-grid" data-id="e59a894" data-element_type="widget" data-widget_type="exad-post-grid.default">
                     <div class="elementor-widget-container">
-
+                        <style>
+                        /* Make all post-grid thumbnail images uniform size while preserving aspect via object-fit */
+                        .exad-post-grid .exad-post-grid-thumbnail { overflow: hidden; display: block; }
+                        .exad-post-grid .exad-post-grid-thumbnail img {
+                            width: 100%;
+                            height: 220px; /* baseline height */
+                            object-fit: cover;
+                            display: block;
+                        }
+                        /* Slightly larger thumbnails on very wide screens */
+                        @media (min-width: 1200px) {
+                            .exad-post-grid .exad-post-grid-thumbnail img { height: 260px; }
+                        }
+                        /* Smaller thumbnails on narrow mobile screens */
+                        @media (max-width: 480px) {
+                            .exad-post-grid .exad-post-grid-thumbnail img { height: 160px; }
+                        }
+                        </style>
 
                         <div class="exad-post-grid">
                             <div class="exad-row-wrapper">
@@ -3993,8 +4037,8 @@ flexibility(document.documentElement);
                                 <article class="exad-post-grid-three exad-col  ">
                                     <div class="exad-post-grid-container image-position-top exad-post-grid-equal-height-yes">
                                         <figure class="exad-post-grid-thumbnail">
-                                            <a href="https://www.siddahmed.com/blogs/sidd-ahmed-is-championing-minority-entrepreneurship/">
-                    <img decoding="async" width="768" height="432" src="https://www.siddahmed.com/wp-content/uploads/2025/08/championing-blog-768x432.jpg" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
+                                            <a href="#">
+                    <img decoding="async" width="768" height="432" src="/image/blog/horror comedy.PNG" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
 
                                         </figure>
 
@@ -4004,7 +4048,7 @@ flexibility(document.documentElement);
                                             <h3>
 
 
-                                                <a href="https://www.siddahmed.com/blogs/sidd-ahmed-is-championing-minority-entrepreneurship/" class="exad-post-grid-title">Sidd Ahmed is Championing Minority Entrepreneurship</a>
+                                                <a href="#" class="exad-post-grid-title">Sidd Ahmed is Championing Minority Entrepreneurship</a>
 
 
                                             </h3>
@@ -4021,8 +4065,8 @@ flexibility(document.documentElement);
                                 <article class="exad-post-grid-three exad-col  ">
                                     <div class="exad-post-grid-container image-position-top exad-post-grid-equal-height-yes">
                                         <figure class="exad-post-grid-thumbnail">
-                                            <a href="https://www.siddahmed.com/blogs/georgia-based-sidd-ahmeds-leadership-at-vdart-is-shaping-atlantas-business-future/">
-                    <img decoding="async" width="768" height="432" src="https://www.siddahmed.com/wp-content/uploads/2025/08/Georgia-blog-768x432.jpg" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
+                                            <a href="#">
+                    <img decoding="async" width="768" height="432" src="/image/blog/mane maratakidhe.JPG" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
 
                                         </figure>
 
@@ -4032,13 +4076,13 @@ flexibility(document.documentElement);
                                             <h3>
 
 
-                                                <a href="https://www.siddahmed.com/blogs/georgia-based-sidd-ahmeds-leadership-at-vdart-is-shaping-atlantas-business-future/" class="exad-post-grid-title">Georgia-Based Sidd Ahmed’s Leadership at VDart Is Shaping...</a>
+                                                <a href="#" class="exad-post-grid-title">Georgia-Based Sidd Ahmed’s Leadership at VDart Is Shaping...</a>
 
 
                                             </h3>
 
 
-                                            <div class="exad-post-footer"><a href="https://www.siddahmed.com/blogs/georgia-based-sidd-ahmeds-leadership-at-vdart-is-shaping-atlantas-business-future/" target="_blank" class="read-more">Read More</a></div>
+                                            <div class="exad-post-footer"><a href="#" target="_blank" class="read-more">Read More</a></div>
 
                                         </div>
 
@@ -4049,8 +4093,8 @@ flexibility(document.documentElement);
                                 <article class="exad-post-grid-three exad-col  ">
                                     <div class="exad-post-grid-container image-position-top exad-post-grid-equal-height-yes">
                                         <figure class="exad-post-grid-thumbnail">
-                                            <a href="https://www.siddahmed.com/blogs/how-audiences-are-empowered-by-sidd-ahmeds-inspirational-story/">
-                    <img loading="lazy" decoding="async" width="768" height="432" src="https://www.siddahmed.com/wp-content/uploads/2025/08/rsz_iim_1-768x432.jpg" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
+                                            <a href="#">
+                                             <img loading="lazy" decoding="async" width="768" height="432" src="/image/blog/manju swaraj.PNG" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
 
                                         </figure>
 
@@ -4060,13 +4104,13 @@ flexibility(document.documentElement);
                                             <h3>
 
 
-                                                <a href="https://www.siddahmed.com/blogs/how-audiences-are-empowered-by-sidd-ahmeds-inspirational-story/" class="exad-post-grid-title"> How Audiences are Empowered by Sidd Ahmed’s Inspirational...</a>
+                                                <a href="#" class="exad-post-grid-title"> How Audiences are Empowered by Sidd Ahmed’s Inspirational...</a>
 
 
                                             </h3>
 
 
-                                            <div class="exad-post-footer"><a href="https://www.siddahmed.com/blogs/how-audiences-are-empowered-by-sidd-ahmeds-inspirational-story/" target="_blank" class="read-more">Read More</a></div>
+                                            <div class="exad-post-footer"><a href="#" target="_blank" class="read-more">Read More</a></div>
 
                                         </div>
 
@@ -4077,8 +4121,8 @@ flexibility(document.documentElement);
                                 <article class="exad-post-grid-three exad-col  ">
                                     <div class="exad-post-grid-container image-position-top exad-post-grid-equal-height-yes">
                                         <figure class="exad-post-grid-thumbnail">
-                                            <a href="https://www.siddahmed.com/blogs/skills-and-growth-mindset-matter-more-than-degrees/">
-                    <img loading="lazy" decoding="async" width="768" height="432" src="https://www.siddahmed.com/wp-content/uploads/2025/08/skills-blog-768x432.jpg" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
+                                            <a href="#">
+                    <img loading="lazy" decoding="async" width="768" height="432" src="/image/blog/petromax (2).JPG" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
 
                                         </figure>
 
@@ -4088,13 +4132,13 @@ flexibility(document.documentElement);
                                             <h3>
 
 
-                                                <a href="https://www.siddahmed.com/blogs/skills-and-growth-mindset-matter-more-than-degrees/" class="exad-post-grid-title">Skills and Growth Mindset Matter More Than Degrees</a>
+                                                <a href="#" class="exad-post-grid-title">Skills and Growth Mindset Matter More Than Degrees</a>
 
 
                                             </h3>
 
 
-                                            <div class="exad-post-footer"><a href="https://www.siddahmed.com/blogs/skills-and-growth-mindset-matter-more-than-degrees/" target="_blank" class="read-more">Read More</a></div>
+                                            <div class="exad-post-footer"><a href="#" target="_blank" class="read-more">Read More</a></div>
 
                                         </div>
 
@@ -4105,8 +4149,8 @@ flexibility(document.documentElement);
                                 <article class="exad-post-grid-three exad-col  ">
                                     <div class="exad-post-grid-container image-position-top exad-post-grid-equal-height-yes">
                                         <figure class="exad-post-grid-thumbnail">
-                                            <a href="https://www.siddahmed.com/blogs/transforming-peoples-trajectories/">
-                    <img loading="lazy" decoding="async" width="768" height="432" src="https://www.siddahmed.com/wp-content/uploads/2025/08/rsz_ey-gala-768x432.jpg" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
+                                            <a href="#">
+                    <img loading="lazy" decoding="async" width="768" height="432" src="/image/blog/petromax.JPG" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
 
                                         </figure>
 
@@ -4116,13 +4160,13 @@ flexibility(document.documentElement);
                                             <h3>
 
 
-                                                <a href="https://www.siddahmed.com/blogs/transforming-peoples-trajectories/" class="exad-post-grid-title">Transforming People’s Trajectories</a>
+                                                <a href="#" class="exad-post-grid-title">Transforming People’s Trajectories</a>
 
 
                                             </h3>
 
 
-                                            <div class="exad-post-footer"><a href="https://www.siddahmed.com/blogs/transforming-peoples-trajectories/" target="_blank" class="read-more">Read More</a></div>
+                                            <div class="exad-post-footer"><a href="#" target="_blank" class="read-more">Read More</a></div>
 
                                         </div>
 
@@ -4133,8 +4177,8 @@ flexibility(document.documentElement);
                                 <article class="exad-post-grid-three exad-col  ">
                                     <div class="exad-post-grid-container image-position-top exad-post-grid-equal-height-yes">
                                         <figure class="exad-post-grid-thumbnail">
-                                            <a href="https://www.siddahmed.com/blogs/empowering-high-potential-women-leaders/">
-                    <img loading="lazy" decoding="async" width="768" height="432" src="https://www.siddahmed.com/wp-content/uploads/2025/08/rsz_1iim_-768x432.jpg" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
+                                            <a href="#">
+                    <img loading="lazy" decoding="async" width="768" height="432" src="/image/blog/Real hero.JPG" class="attachment-medium_large size-medium_large wp-post-image" alt="" />                </a>
 
                                         </figure>
 
@@ -4144,13 +4188,13 @@ flexibility(document.documentElement);
                                             <h3>
 
 
-                                                <a href="https://www.siddahmed.com/blogs/empowering-high-potential-women-leaders/" class="exad-post-grid-title">Empowering High-Potential Women Leaders</a>
+                                                <a href="#" class="exad-post-grid-title">Empowering High-Potential Women Leaders</a>
 
 
                                             </h3>
 
 
-                                            <div class="exad-post-footer"><a href="https://www.siddahmed.com/blogs/empowering-high-potential-women-leaders/" target="_blank" class="read-more">Read More</a></div>
+                                            <div class="exad-post-footer"><a href="#" target="_blank" class="read-more">Read More</a></div>
 
                                         </div>
 
