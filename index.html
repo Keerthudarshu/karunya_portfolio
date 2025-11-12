@@ -124,6 +124,54 @@
         .elementor-nav-menu__container, .elementor-nav-menu--main, .elementor-nav-menu--dropdown {
             color: inherit !important;
         }
+
+        /* Mobile-specific override: force nav text to black on small screens */
+        @media (max-width: 921px) {
+            .elementor-nav-menu .elementor-item,
+            .elementor-nav-menu a,
+            .elementor-nav-menu .elementor-item a,
+            .elementor-nav-menu--dropdown a,
+            .elementor-nav-menu__container,
+            .elementor-nav-menu--main,
+            .main-header-menu .menu-link,
+            .main-header-menu .menu-item > a,
+            .menu-item .menu-link {
+                color: #000000 !important;
+            }
+
+            /* Ensure active/hover states are also black (won't flash to other colors)") */
+            .elementor-nav-menu .elementor-item.elementor-item-active,
+            .elementor-nav-menu .elementor-item.current-menu-item,
+            .main-header-menu .current-menu-item .menu-link,
+            .main-header-menu .menu-item.current_page_item > .menu-link {
+                color: #000000 !important;
+                font-weight: 700 !important;
+            }
+
+            /* Try to override inline color attributes from exported HTML */
+            .elementor-nav-menu [style*="color"],
+            a[style*="color"] {
+                color: #000000 !important;
+            }
+
+            /* Extra-high-specificity rules for exported/Elementor-generated CSS that appears later in the file */
+            #menu-1-c50c4d2.elementor-nav-menu li a,
+            #menu-1-c50c4d2.elementor-nav-menu .elementor-item,
+            #menu-1-c50c4d2.elementor-nav-menu .elementor-item a,
+            #menu-1-c50c4d2.elementor-nav-menu li.current-menu-item>a,
+            #menu-1-c50c4d2.elementor-nav-menu li.current_page_item>a,
+            #menu-1-c50c4d2.elementor-nav-menu a[aria-current="page"] {
+                color: #000000 !important;
+            }
+
+            /* Specific active/elementor-item-active rules (match Elementor's generated selectors) */
+            #menu-1-c50c4d2 .elementor-item.elementor-item-active,
+            #menu-1-c50c4d2 .elementor-item.elementor-item-active>a,
+            .elementor-element .elementor-nav-menu--main #menu-1-c50c4d2 .elementor-item.elementor-item-active {
+                color: #000000 !important;
+                font-weight: 700 !important;
+            }
+        }
     </style>
 
 

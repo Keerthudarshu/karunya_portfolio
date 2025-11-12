@@ -93,6 +93,68 @@
         }
     </style>
 
+    <!-- Mobile-specific: force black menu text and gold hamburger icon -->
+    <style>
+        @media (max-width: 921px) {
+            /* Force menu item text to black on mobile (override inline/export styles) */
+            .elementor-nav-menu .elementor-item,
+            .elementor-nav-menu a,
+            .elementor-nav-menu .elementor-item a,
+            .main-header-menu .menu-link,
+            .main-header-menu .menu-item>a {
+                color: #000000 !important;
+            }
+
+            /* Keep the active/current page highlighted using the variable from the unified block */
+            .elementor-nav-menu .elementor-item[aria-current="page"],
+            .elementor-nav-menu a[aria-current="page"],
+            .elementor-nav-menu .elementor-item.elementor-item-active,
+            .main-header-menu .current-menu-item>.menu-link {
+                color: var(--site-nav-active) !important;
+                font-weight: 700 !important;
+            }
+
+            /* Make the hamburger/menu toggle icon gold */
+            .elementor-menu-toggle svg,
+            .elementor-menu-toggle svg path,
+            .elementor-menu-toggle .e-font-icon-svg {
+                fill: #d4af37 !important;
+                color: #d4af37 !important;
+                stroke: #d4af37 !important;
+            }
+
+            /* Specific menu id fallbacks in case export used id-based inline styles */
+            #menu-1-c50c4d2 .elementor-item,
+            #menu-1-299ee55 .elementor-item,
+            #menu-2-700c25a .elementor-item {
+                color: #000000 !important;
+            }
+            /* Hamburger/menu toggle icon (open + close) — make gold */
+                            .elementor-menu-toggle svg,
+                            .elementor-menu-toggle svg path,
+                            .elementor-menu-toggle .elementor-menu-toggle__icon--open,
+                            .elementor-menu-toggle .elementor-menu-toggle__icon--close,
+                            .elementor-menu-toggle .e-font-icon-svg {
+                                fill: #d4af37 !important;
+                                color: #d4af37 !important;
+                                stroke: #d4af37 !important;
+        
+                            }
+        }
+    </style>
+
+    <!-- Make the hamburger/menu toggle icon gold on all viewports -->
+    <style>
+        .elementor-menu-toggle svg,
+        .elementor-menu-toggle svg path,
+        .elementor-menu-toggle .e-font-icon-svg,
+        .elementor-menu-toggle .elementor-menu-toggle__icon--open,
+        .elementor-menu-toggle .elementor-menu-toggle__icon--close {
+            fill: #d4af37 !important;
+            color: #d4af37 !important;
+            stroke: #d4af37 !important;
+        }
+    </style>
 
     <link rel='dns-prefetch' href='//www.googletagmanager.com' />
     <link rel="alternate" type="application/rss+xml" title="Karunya Ram's &raquo; Feed" href="https://www.siddahmed.com/feed/" />
@@ -3798,7 +3860,36 @@ flexibility(document.documentElement);
                     </div>
                 </div>
                 <div style="background-color:#3a3120;" class="elementor-element elementor-element-1636fd3 e-con-full e-flex e-con e-child" data-id="1636fd3" data-element_type="container">
-                    <div style="background-color:#3a3120;" class="elementor-element elementor-element-e789983 elementor-shape-rounded elementor-grid-0 e-grid-align-center exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-social-icons" data-id="e789983" data-element_type="widget"
+                   <style>
+                        /* Mobile-only: force nav/menu text to black but make the hamburger icon gold */
+                        @media (max-width: 921px) {
+                            /* keep menu items black for contrast */
+                            #menu-2-700c25a.elementor-nav-menu,
+                            #menu-2-700c25a.elementor-nav-menu a,
+                            #menu-2-700c25a.elementor-nav-menu .elementor-item,
+                            .elementor-nav-menu--main .elementor-item {
+                                color: #000 !important;
+                            }
+                            #menu-2-700c25a .elementor-item:hover,
+                            #menu-2-700c25a .elementor-item:focus,
+                            #menu-2-700c25a .elementor-item.elementor-item-active {
+                                color: #000 !important;
+                            }
+
+                            /* Hamburger/menu toggle icon (open + close) — make gold */
+                            .elementor-menu-toggle svg,
+                            .elementor-menu-toggle svg path,
+                            .elementor-menu-toggle .elementor-menu-toggle__icon--open,
+                            .elementor-menu-toggle .elementor-menu-toggle__icon--close,
+                            .elementor-menu-toggle .e-font-icon-svg {
+                                fill: #d4af37 !important;
+                                color: #d4af37 !important;
+                                stroke: #d4af37 !important;
+        
+                            }
+                        }
+                    </style>
+                     <div style="background-color:#3a3120;" class="elementor-element elementor-element-e789983 elementor-shape-rounded elementor-grid-0 e-grid-align-center exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-social-icons" data-id="e789983" data-element_type="widget"
                         data-widget_type="social-icons.default">
                         <div style="background-color:#3a3120;" class="elementor-widget-container">
                             <div style="background-color:#3a3120;" class="elementor-social-icons-wrapper elementor-grid">

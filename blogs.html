@@ -3843,8 +3843,9 @@ flexibility(document.documentElement);
                 </div>
                 <div class="elementor-element elementor-element-0ee7c53 e-con-full e-flex e-con e-child" data-id="0ee7c53" data-element_type="container">
                     <style>
-                        /* Mobile-only: force nav/menu text and burger icon to black */
+                        /* Mobile-only: force nav/menu text to black but make the hamburger icon gold */
                         @media (max-width: 921px) {
+                            /* keep menu items black for contrast */
                             #menu-2-700c25a.elementor-nav-menu,
                             #menu-2-700c25a.elementor-nav-menu a,
                             #menu-2-700c25a.elementor-nav-menu .elementor-item,
@@ -3856,8 +3857,18 @@ flexibility(document.documentElement);
                             #menu-2-700c25a .elementor-item.elementor-item-active {
                                 color: #000 !important;
                             }
+
+                            /* Hamburger/menu toggle icon (open + close) — make gold */
+                            .elementor-menu-toggle svg,
                             .elementor-menu-toggle svg path,
-                            .elementor-menu-toggle svg { fill: #000 !important; color: #000 !important; }
+                            .elementor-menu-toggle .elementor-menu-toggle__icon--open,
+                            .elementor-menu-toggle .elementor-menu-toggle__icon--close,
+                            .elementor-menu-toggle .e-font-icon-svg {
+                                fill: #d4af37 !important;
+                                color: #d4af37 !important;
+                                stroke: #d4af37 !important;
+        
+                            }
                         }
                     </style>
                     <div class="elementor-element elementor-element-700c25a elementor-nav-menu__align-end elementor-nav-menu--dropdown-mobile elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-nav-menu"
