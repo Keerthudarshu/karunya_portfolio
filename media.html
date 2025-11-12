@@ -102,6 +102,22 @@
     </script>
     <!-- / Yoast SEO plugin. -->
 
+    <!-- Unified nav color overrides: make nav text consistent and highlight current page -->
+    <style>
+        :root{ --site-nav-color: #e6d6b5; --site-nav-active: #ffffff; }
+        .elementor-nav-menu .elementor-item,
+        .elementor-nav-menu a,
+        .elementor-nav-menu .elementor-item a { color: var(--site-nav-color) !important; }
+        .elementor-nav-menu .elementor-item:hover,
+        .elementor-nav-menu .elementor-item:focus { color: var(--site-nav-active) !important; }
+        .elementor-nav-menu .elementor-item.elementor-item-active,
+        .elementor-nav-menu .elementor-item.current-menu-item,
+        .elementor-nav-menu .elementor-item.elementor-item-active>a { color: var(--site-nav-active) !important; font-weight:700 !important; }
+        .elementor-nav-menu--dropdown a, .elementor-nav-menu--dropdown .elementor-item { color: var(--site-nav-color) !important; }
+        .main-header-menu .menu-link, .main-header-menu .menu-item>a, .main-header-menu .menu-link:link, .main-header-menu .menu-link:visited { color: var(--site-nav-color) !important; }
+        .main-header-menu .current-menu-item>.menu-link, .main-header-menu .menu-item.current-menu-item>.menu-link, .main-header-menu .menu-item.current_page_item>.menu-link { color: var(--site-nav-active) !important; font-weight:700 !important; }
+    </style>
+
 
     <link rel='dns-prefetch' href='//www.googletagmanager.com' />
     <link rel="alternate" type="application/rss+xml" title="Karunya Ram's &raquo; Feed" href="https://www.siddahmed.com/feed/" />
